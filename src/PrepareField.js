@@ -14,7 +14,8 @@ export class PrepareField {
             this.data = data;
             this.sid = 1;
             this.entryCount = 1;
-            this.groupId = 1;
+            this.groupId = 'PARENT';
+            this.groupEntry = 1;
         } else {
             throw new Error(`Field name is missing. Please provide a valid field name.`);
         }
@@ -51,6 +52,16 @@ export class PrepareField {
     }
 
     /**
+    * Set the groupEntry.
+    * @param {string} groupEntry - The group groupEntry to set.
+    */
+    setGroupEntry(groupEntry) {
+        this.groupEntry = groupEntry;
+        return this;
+    }
+    
+
+    /**
      * Sets the entry count in the group.
      * @param {number} entryCount - The entry count to set.
      * @returns {PrepareField} The current instance for chaining.
@@ -80,8 +91,9 @@ export class PrepareField {
             msg_id: this.messageId,
             msg_segment: this.segment,
             msg_sid: this.sid,
-            msg_group_count: this.groupId,
-            msg_entry_count: this.entryCount,
+            msg_group_id: this.groupId,
+            msg_group_entry: this.groupEntry,
+            msg_field_entry: this.entryCount,
             msg_field_type: this.field,
             ...data
         };
