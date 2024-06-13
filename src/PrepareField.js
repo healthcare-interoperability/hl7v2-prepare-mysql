@@ -23,6 +23,7 @@ export class PrepareField {
     /**
      * Sets the message ID.
      * @param {string} messageId - The message ID to set.
+     * @returns {PrepareField} The current instance for chaining.
      */
     setMessageId(messageId) {
         this.messageId = messageId;
@@ -32,19 +33,28 @@ export class PrepareField {
     /**
      * Sets the SID (System Identifier).
      * @param {string} sid - The SID to set.
+     * @returns {PrepareField} The current instance for chaining.
      */
     setSID(sid) {
         this.sid = sid;
         return this;
     }
 
-
+    /**
+     * Sets the group ID.
+     * @param {number} groupId - The group ID to set.
+     * @returns {PrepareField} The current instance for chaining.
+     */
     setGroupId(groupId) {
         this.groupId = groupId;
         return this;
     }
 
-
+    /**
+     * Sets the entry count in the group.
+     * @param {number} entryCount - The entry count to set.
+     * @returns {PrepareField} The current instance for chaining.
+     */
     setEntryCount(entryCount) {
         this.entryCount = entryCount;
         return this;
@@ -53,12 +63,18 @@ export class PrepareField {
     /**
      * Sets the segment.
      * @param {string} segment - The segment to set.
+     * @returns {PrepareField} The current instance for chaining.
      */
     setSegment(segment) {
         this.segment = segment;
         return this;
     }
 
+    /**
+     * Prepares the field with the provided data.
+     * @param {Object} data - The data to include in the prepared field.
+     * @returns {Object} The prepared field object.
+     */
     prepareField(data) {
         return {
             msg_id: this.messageId,
