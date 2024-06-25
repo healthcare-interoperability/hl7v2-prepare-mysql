@@ -1,7 +1,8 @@
+import { TypeCastHD } from "@healthcare-interoperability/hl7v2-typecast";
 import { PrepareField } from "./PrepareField";
 import { PL, HD } from '@healthcare-interoperability/hl7v2-datatypes';
 
-export class PreparePL extends PrepareField {
+export class PreparePLField extends PrepareField {
     /**
        * Constructs a new PrepareCXField instance.
        * @param {string} field - The field name.

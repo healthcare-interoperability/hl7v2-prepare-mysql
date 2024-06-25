@@ -59,7 +59,7 @@ export class PrepareField {
         this.groupEntry = groupEntry;
         return this;
     }
-    
+
 
     /**
      * Sets the entry count in the group.
@@ -97,6 +97,16 @@ export class PrepareField {
             msg_field_type: this.field,
             ...data
         };
+    }
+
+
+    prepareEntityIdentifier(entInt) {
+        try {
+            return entInt?.EntityIdentifier?.toString() || null;
+        } catch (e) {
+            console.error('Error preparing entity identifier:', e);
+            return null;
+        }
     }
 
     /**
