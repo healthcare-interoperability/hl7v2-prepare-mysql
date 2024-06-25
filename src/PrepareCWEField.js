@@ -26,15 +26,15 @@ export class PrepareCWEField extends PrepareField {
      * @returns {Object|null} The mapped codeable concept object or null if code or display is missing.
      * @private
      */
-    _mapCodeableConcept(code, display, system, text) {
+    _mapCodeableConcept(cwe_code, cwe_display, cwe_system, cwe_text) {
         let codeableConcept = null;
-        if (code || display) {
-            codeableConcept = { code, display };
-            if (system) {
-                codeableConcept['system'] = system;
+        if (cwe_code || cwe_display) {
+            codeableConcept = { cwe_code, cwe_display };
+            if (cwe_system) {
+                codeableConcept['cwe_system'] = cwe_system;
             }
-            if (text) {
-                codeableConcept['text'] = text;
+            if (cwe_text) {
+                codeableConcept['cwe_text'] = cwe_text;
             }
         }
         return codeableConcept;
