@@ -1,6 +1,6 @@
 {
   "name": "@healthcare-interoperability/hl7v2-prepare-mysql",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Sample Application to Prepare HLv2 Messages for Storing in MySQL",
   "main": "dist/index.js",
   "scripts": {
